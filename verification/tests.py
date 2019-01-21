@@ -11,26 +11,67 @@ Each test is a dict with
 TESTS = {
     "Basics": [
         {
-            "input": [3, 2],
-            "answer": 5,
-            "explanation": "3+2=?"
+            "input": [[
+                ['A', 'C', 100],
+                ['A', 'B', 20],
+                ['B', 'C', 50]
+            ], 'A', 'C'],
+            "answer": 70,
+            "explanation": "A->B(20)->C(50)"
         },
         {
-            "input": [5, 7],
-            "answer": 12,
-            "explanation": "5+7=?"
+            "input": [[
+                ['A', 'C', 100],
+                ['A', 'B', 20],
+                ['B', 'C', 50]
+            ], 'C', 'A'],
+            "answer": 70,
+            "explanation": "C->B(50)->A(20)"
+        },
+        {
+            "input": [[
+                ['A', 'C', 40],
+                ['A', 'B', 20],
+                ['A', 'D', 20],
+                ['B', 'C', 50],
+                ['D', 'C', 70]
+            ], 'D', 'C'],
+            "answer": 60,
+            "explanation": "D->A(20)->C(40)"
+        },
+        {
+            "input": [[
+                ['A', 'C', 100],
+                ['A', 'B', 20],
+                ['D', 'F', 900]
+            ], 'A', 'F'],
+            "answer": 0,
+            "explanation": "no connection"
+        },
+        {
+            "input": [[
+                ['A', 'B', 10],
+                ['A', 'C', 15],
+                ['B', 'D', 15],
+                ['C', 'D', 10]
+            ], 'A', 'C'],
+            "answer": 25,
+            "explanation": "A->B(10)->D(15) || A->C(15)->D(10)"
         }
     ],
     "Extra": [
         {
-            "input": [6, 3],
-            "answer": 9,
-            "explanation": "6+3=?"
-        },
-        {
-            "input": [6, 7],
-            "answer": 13,
-            "explanation": "6+7=?"
+            "input": [[
+                ['A', 'B', 10],
+                ['A', 'C', 20],
+                ['B', 'D', 15],
+                ['C', 'D', 5],
+                ['D', 'E', 5],
+                ['E', 'F', 10],
+                ['C', 'F', 25]
+            ], 'A', 'F'],
+            "answer": 40,
+            "explanation": "A->B(10)->D(15)->E(5)->F(10)"
         }
     ]
 }
