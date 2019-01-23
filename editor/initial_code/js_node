@@ -1,6 +1,6 @@
 "use strict";
 
-function cheapestFlight(a, b, c) {
+function cheapestFlight(costs, a, b) {
 
     // your code here
     return undefined;
@@ -43,7 +43,7 @@ if (!global.is_checking) {
   ['B', 'D', 15],
   ['C', 'D', 10]],
  'A',
- 'C'), 25);
+ 'D'), 25);
 
     console.log("Coding complete? Click 'Check' to earn cool rewards!");
 }

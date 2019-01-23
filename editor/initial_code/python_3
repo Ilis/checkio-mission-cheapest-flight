@@ -1,4 +1,7 @@
-def cheapest_flight(a, b, c):
+from typing import List
+
+
+def cheapest_flight(costs: List, a: str, b: str) -> int:
     # your code here
     return None
 
@@ -39,5 +42,5 @@ if __name__ == '__main__':
   ['B', 'D', 15],
   ['C', 'D', 10]],
  'A',
- 'C') == 25
+ 'D') == 25
     print("Coding complete? Click 'Check' to earn cool rewards!")
